@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fa So La Ti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Playlists</h2>
+    <div id="playlist-list"></div>
+    <button class="create-playlist-btn" onclick="showCreatePlaylistPopup()">+</button>
+  </div>
+
+  <div class="container">
+    <div class="search-section">
+      <h1>Fa So La Ti</h1>
+      <span class="search-icon" id="search-icon" onclick="showSearch()">🔍</span>
+    </div>
+    <input type="text" id="song-input" placeholder="Enter song name or artist" />
+    <button onclick="searchSong()">Search</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <!-- Playlist Creation Popup -->
+  <div id="overlay" class="overlay" style="display: none;"></div>
+  <div id="playlist-popup" class="popup" style="display: none;">
+    <h3>Create New Playlist</h3>
+    <input type="text" id="new-playlist-name" placeholder="Playlist Name" />
+    <button onclick="createPlaylist()">Create</button>
+    <button onclick="hideCreatePlaylistPopup()">Cancel</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
